@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery fancy-background Plugin Demo</title>
+<style>
+body { margin:0; padding:0; background-color:#333;}
+.container { position:absolute; top:50%; left:50%; width:728px; margin-left:-364px; height:140px; margin-top:-70px; background-color:rgba(0,0,0,.8); text-align:center; color:#fff; border-radius:5px;}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>jQuery fancy-background Demo</h1>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script src="fancy-background.js"></script>
+<script>
+  $(document).ready(function() {
+    $('body').fancyBackground({
+      minHeightPCT : 20,
+      maxHeightPCT : 80,
+      spaceGutter : 30,
+      duration : 60,
+      colors : ['#07579c', '#62285a', '#e9b908', '#43af46', '#ee3427', '#00928d']
+    });
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

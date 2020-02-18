@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fancy Background</title>
+    <!-- Latest compiled and minified CSS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      body {
+        background-color: #000000;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.95);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="page-header">
+        <h1>Fancy Background <small>jQuery plugin by @flinbu</small></h1>
+        <p>A fancy lines background animated. For free use, just give me credit!</p>
+      </div>
+      <div class="col-xs-12">
+        <h2 class="page-header">Download</h2>
+        <p class="lead">Fancy background is easy to use, just download from Github.</p>
+        <p>
+          <a href="https://github.com/flinbu/fancy-background" target="_blank" class="btn btn-default"><i class="fa fa-github"></i> Download from Github</a>
+        </p>
+      </div>
+      <div class="col-xs-12">
+        <h2>Usage</h2>
+        <p>The plugin requires jQuery, just call it before fancy background script</p>
+        <pre>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"&gt;&lt;/script&gt;</pre>
+        <p>And call Fancy Background (min included):</p>
+        <pre>&lt;script src="fancy-background.min.js"&gt;&lt;/script&gt;</pre>
+        <p>Now just activate in document ready:</p>
+<pre>&lt;script&gt;
+  $(document).ready(function() {
+    $('body').fancyBackground({
+      minHeightPCT : 20,
+      maxHeightPCT : 80,
+      spaceGutter : 30,
+      duration : 60,
+      colors : ['#07579c', '#62285a', '#e9b908', '#43af46', '#ee3427', '#00928d']
+    });
+  });
+&lt;/script&gt;</pre>
+      </div>
+      <div class="col-xs-12">
+        <h2>Options</h2>
+        <p>You can change this options to modify the background:</p>
+        <dl class="dl-horizontal">
+          <dt>lines</dt>
+          <dd>(default: false) You can specify the amount of lines, this is false by default and the plugin calculate the number of lines</dd>
+          <dt>lineWidth</dt>
+          <dd>(default: 10) The width size of the line in pixels</dd>
+          <dt>minHeightPCT</dt>
+          <dd>(default: 40) The minimal height percentage for the line</dd>
+          <dt>maxHeightPCT</dt>
+          <dd>(default: 80) The maximun height percentage for the line</dd>
+          <dt>spaceGutter</dt>
+          <dd>(default: false) The space width between lines, if <code>lines</code> is false, this will be ignored</dd>
+          <dt>duration</dt>
+          <dd>(default: 30) The duration of the animation per line</dd>
+          <dt>colors</dt>
+          <dd>(default: null) Array with hexa code colors, the background colors for the lines will be random from this array</dd>
+        </dl>
+<pre>&lt;script&gt;
+  $(document).ready(function() {
+    $('body').fancyBackground({
+      lines : false,
+      lineWidth : 10,
+      minHeightPCT : 40,
+      maxHeightPCT : 80,
+      spaceGutter : false,
+      duration : 30,
+      colors : ['#07579c', '#62285a', '#e9b908', '#43af46', '#ee3427', '#00928d']
+    });
+  });
+&lt;/script&gt;</pre>
+      </div>
+      <div class="col-xs-12">
+        <h2>Follow me!</h2>
+        <p>
+          <a href="http://facebook.com/flinbu" target="_blank" class="btn btn-default"><i class="fa fa-facebook"></i> flinbu</a>
+          <a href="http://twitter.com/flinbu" target="_blank" class="btn btn-default"><i class="fa fa-twitter"></i> @flinbu</a>
+          <a href="https://github.com/flinbu" target="_blank" class="btn btn-default"><i class="fa fa-github"></i> @flinbu</a>
+          <a href="https://medium.com/@flinbu" target="_blank" class="btn btn-default"><i class="fa fa-medium"></i> @flinbu</a>
+          <a href="https://www.linkedin.com/in/flinbu" target="_blank" class="btn btn-default"><i class="fa fa-linkedin"></i> @flinbu</a>
+        </p>
+      </div>
+    </main>
+    <!-- For example -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Fancy Background JS -->
+    <script src="fancy-background.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('body').fancyBackground({
+          minHeightPCT : 20,
+          maxHeightPCT : 80,
+          spaceGutter : 30,
+          duration : 60,
+          colors : ['#07579c', '#62285a', '#e9b908', '#43af46', '#ee3427', '#00928d']
+        });
+      });
+    </script>
+  </body>
+</html>
