@@ -1,14 +1,29 @@
-// .slider-container{
-//     height: 100vh;
-// }
-// #slider{
-//     height: 70vh;
-//     ul{
-//         li{
-//             height: 100%;
-//             img{
-//                 height: 100%;
-//             }
-//         }
-//     }
-// }
+#title{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("http://localhost/mycave/assets/img/slide1.jpg");
+    background-size: cover;
+    background-position: center;
+    h1{
+        font-family: 'bold';
+        font-size: 120px;
+        color: white;
+        margin-bottom: 20px;
+        margin-top: 0; 
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-family: regular;
+        font-size: 16px;
+        border: 2px solid white;
+        padding: 15px 30px;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+    }
+}
+
+

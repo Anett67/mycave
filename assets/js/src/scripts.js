@@ -1,6 +1,6 @@
 $(function(){
     // SLIDER
-    $(".slider").slider();
+    // $(".slider").slider();
 
 
 })

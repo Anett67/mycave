@@ -1,9 +1,5 @@
 
-
-
-
-
-
+    
 <!-- <section id="slider">
     <ul class="slider">
       <li>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Cave</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/libs/Fully-Responsive-Customizable-Image-Carousel-Plugin-jQuery/slider.min.css">
+<!--     <link rel="stylesheet" href="assets/libs/Fully-Responsive-Customizable-Image-Carousel-Plugin-jQuery/slider.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
