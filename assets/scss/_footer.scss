@@ -1,0 +1,13 @@
+footer{
+    background-color: $bordeaux;
+    font-family: 'regular';
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    a{
+        color: white;
+        text-decoration: none;
+        padding-left: 50px;
+    }
+}

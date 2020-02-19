@@ -22,7 +22,7 @@ gulp.task("browser-sync", function(){
 		files: [
 		'./assets/css/*.css',
 		'.assets/js/src/*.js',
-		'./*.html'
+		'./*.php'
 		]
 	});
 });
@@ -58,14 +58,14 @@ gulp.task('scripts', function(){
 })
 
 gulp.task("code", function(){
-	return gulp.src("assets/**/*.html")
+	return gulp.src("assets/**/*.php")
 	pipe(browserSync.reload({stream: true}))
 })
 
 gulp.task('watch', function(){
 	gulp.watch('assets/scss/**/*.scss',
 	gulp.parallel('sass'));
-	gulp.watch('assets/*.html', browserSync.reload);
+	gulp.watch('assets/*.php', browserSync.reload);
 	gulp.watch(['assets/js/src/*.js', 'assets/libs/**/*.js'] , gulp.parallel('scripts'));
 });
 

@@ -1,0 +1,4 @@
+@import "font-face";
+
+@include font-face("regular", "../fonts/SourceSansPro-Regular");
+@include font-face("bold", "../fonts/SourceSansPro-Bold");
