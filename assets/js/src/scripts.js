@@ -1,6 +1,0 @@
-$(function(){
-    // SLIDER
-    // $(".slider").slider();
-
-
-})
