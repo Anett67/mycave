@@ -24,6 +24,11 @@
         cursor: pointer;
         letter-spacing: 1.5spx;
     }
+    #connect-message{
+        color: white;
+        font-family: regular;
+        font-size: 2em;
+    }
 }
 
 // PAGE DE CONNECTION
@@ -78,6 +83,7 @@
     min-height: 90vh;
     background-image: url('../img/grapes_black_and_white.png');
     background-size: cover;
+    background-attachment: fixed;
     font-family: regular;
     color: white;
     h1{
@@ -212,6 +218,10 @@
                 background-color: $bordeaux;
                 border: 2px solid $bordeaux;
                 cursor: pointer;
+            }
+            #cancel{
+                background-color: transparent;
+                margin-top: 10px; 
             }
         }    
     }

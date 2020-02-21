@@ -1,3 +1,4 @@
+<?php require '../request/param.php' ?>
 <?php require 'header.php'; ?>
 
 <div class="products">
@@ -23,15 +24,18 @@
             <button type="submit">APPLY FILTERS</button>
 
         </form>
-        
+        <?php 
+            if(isset($_SESSION['id'])):
+         ?>
         <div class="buttons">
-            <button>ADD NEW WINE</button>
+            <button id="add_new_button">ADD NEW WINE</button>
             <button type="submit">EDIT</button>
             
             <form action="">
                  <button type="submit">DELETE</button>
             </form>
         </div>
+        <?php endif; ?>
         <!-- Formulaire pour modifier et rajouter des produits -->
         <form action="../request/new_post.php" method="post" id="add_new" enctype="multipart/form-data">
             <h2>Add New Product</h2>
@@ -63,7 +67,7 @@
             <input id="file-upload" type="file"/>
             
             <button type="submit">Save</button>
-
+            <button id="cancel" >Cancel</button>
         </form>
     </div>
     

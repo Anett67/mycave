@@ -1,12 +1,12 @@
 <?php 
-
+@require '../request/param.php';
 @include 'header.php';
 
  ?>
 
 <section id="connect_form">
     
-    <form action="">
+    <form action="../request/login_post.php" method="post">
         
         <h2>Admin Page</h2>
 
@@ -17,9 +17,11 @@
         <input type="password" id="password" name="password">
 
         <button type="submit">Log In</button>
+        
     </form>
 
 </section>
+
 
  <?php 
 

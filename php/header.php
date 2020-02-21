@@ -1,4 +1,3 @@
-<?php define('SITE_URL', 'http://localhost/mycave/'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
