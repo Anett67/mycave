@@ -1,0 +1,16 @@
+@mixin input-fields($bottom, $top, $padding){
+    margin-bottom: $bottom;
+    margin-top: $top;
+    padding: $padding;
+    border: 2px solid #c6859d;
+    border-radius: 10px;
+    color: $rose;
+    font-size: 12px;
+    cursor: pointer;  
+}
+
+@mixin flex($dir, $just){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+}

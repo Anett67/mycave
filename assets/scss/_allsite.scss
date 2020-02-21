@@ -93,9 +93,7 @@
         align-items: center;
         width: 35%;
         #selection_form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex(column, center);
             width: 60%;
             background-color: rgba(128, 5, 46, 0.9);
             padding-right:40px;
@@ -128,12 +126,15 @@
         }
         .buttons{
             width: 70%;
-            display: flex;
-            justify-content: space-between;
+            @include flex(row, space-between);
             form{
                 width: 30%;
-               button{
-                width: 100%;
+                button{
+                    width: 100%;
+                }
+            }
+            button{
+                width: 30%;
                 font-size: 12px;
                 height: 40px;
                 background-color: $rouge;
@@ -148,8 +149,71 @@
                     border-color: white;
                     } 
                 }
-            }
         }
+
+       #add_new{
+            @include flex(column, center);
+            width: 60%;
+            background-color: $rose;
+            padding-right:40px;
+            padding-left: 40px;
+            padding-bottom: 27px;
+            padding-top: 30px;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            h2{
+                text-align: center;
+            }
+            label{
+                margin-bottom: 5px;
+            }
+            select{
+                @include input-fields(5px, 5px, 10px); 
+            }
+            input[type="text"], input[type="number"], textarea{
+                @include input-fields(5px, 10px, 12px);
+            }
+            p{
+                margin-top: 0;
+                text-align: right;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            input[type="file"] {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0,0,0,0);
+                border: 0;
+            }
+            .custom-file-upload {
+                border: 2px solid $bordeaux;
+                color: $bordeaux;
+                background-color: white;
+                display: inline-block;
+                padding: 6px 12px;
+                cursor: pointer;
+                text-align: center;
+                margin: 10px 0px;
+                height: 30px;
+                @include flex(row, center);
+                align-items: center;
+                p{
+                    text-decoration: none;
+                    margin: 0px;
+                }
+            }
+            button{
+                height: 40px;
+                color: white;
+                background-color: $bordeaux;
+                border: 2px solid $bordeaux;
+                cursor: pointer;
+            }
+        }    
     }
 }
 
