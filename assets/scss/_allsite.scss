@@ -156,6 +156,13 @@
                     } 
                 }
         }
+        #response{
+            width: 70%;
+            margin-top: 10px;
+            background-color: $rose;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
 
        #add_new{
             @include flex(column, center);
