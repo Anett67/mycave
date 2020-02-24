@@ -4,7 +4,7 @@ $(function(){
 
     $('#add_new').hide();
     $('#add_new_button').click(function(){
-        $('#add_new').slideDown();
+        $('#add_new').slideToggle();
     });
 
     $('#cancel').click(function(e){
