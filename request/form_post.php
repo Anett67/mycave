@@ -3,31 +3,20 @@
 
 <?php 
 
-$name           = strip_tags($_POST['name']);
-$country        = intval($_POST['country_new']);
-$region         = strip_tags($_POST['region']);
+$bottle_id      = strip_tags($_POST['select_bottle']);
 $year           = intval($_POST['year_new']);
-$grapes         = intval($_POST['grapes_new']);
 $description    = strip_tags($_POST['description']);
 $file           = $_FILES['file_upload'];
 
-var_dump($name, $country, $year, $region, $grapes, $description, $file['tmp_name']);
+var_dump($bottle_id, $year, $description, $file['tmp_name']);
 
-if(empty($name)):
+
+if($bottle_id === 0):
     $result = false;
-    $response = "Please enter the name of the new product";
-elseif($country === 0):
-    $result = false;
-    $response = "Please choose a country";
-elseif(empty($region)):
-    $result = false;
-    $response = "Please enter the region of the new product";
+    $response = "Please choose a bottle";
 elseif(empty($year)):
     $result = false;
     $response = "Please enter the year of production";
-elseif($grapes === 0):
-    $result = false;
-    $response = "Please choose the right grape type";
 elseif(empty($description)):
     $result = false;
     $response = "Please enter a description of your new product";
@@ -47,15 +36,12 @@ else:
         if($error === 4):
 
             $req = $bdd->prepare("  
-                INSERT INTO wine(wine_name, year, grapes_id, country_id, region, description, file_url)
-                VALUES (:wine_name, :year, :grapes_id, :country_id, :region, :description, :file_url)
+                INSERT INTO bottle_collection (bottle_id, year, description, file_url)
+                VALUES (:bottle_id, :year, :description, :file_url)
             ");
 
-            $req->bindValue(':wine_name', $name, PDO:: PARAM_STR);
+            $req->bindValue(':bottle_id', $bottle_id, PDO:: PARAM_INT);
             $req->bindValue(':year', $year, PDO:: PARAM_INT);
-            $req->bindValue(':grapes_id', $grapes, PDO:: PARAM_INT);
-            $req->bindValue(':country_id', $country, PDO:: PARAM_INT);
-            $req->bindValue(':region', $region, PDO:: PARAM_STR);
             $req->bindValue(':description', $description, PDO:: PARAM_STR);
             $req->bindValue(':file_url', "", PDO:: PARAM_STR);
 
@@ -85,17 +71,14 @@ else:
                     if($move_result):
 
                     $req = $bdd->prepare("  
-                        INSERT INTO wine(wine_name, year, grapes_id, country_id, region, description, file_url)
-                        VALUES (:wine_name, :year, :grapes_id, :country_id, :region, :description, :file_url)
+                        INSERT INTO bottle_collection (bottle_id, year, description, file_url)
+                        VALUES (:bottle_id, :year, :description, :file_url)
                     ");
 
-                    $req->bindValue(':wine_name', $name, PDO:: PARAM_STR);
+                    $req->bindValue(':bottle_id', $bottle_id, PDO:: PARAM_INT);
                     $req->bindValue(':year', $year, PDO:: PARAM_INT);
-                    $req->bindValue(':grapes_id', $grapes, PDO:: PARAM_INT);
-                    $req->bindValue(':country_id', $country, PDO:: PARAM_INT);
-                    $req->bindValue(':region', $region, PDO:: PARAM_STR);
                     $req->bindValue(':description', $description, PDO:: PARAM_STR);
-                    $req->bindValue(':file_url',$dbname , PDO:: PARAM_STR);   
+                    $req->bindValue(':file_url', $dbname, PDO:: PARAM_STR);
 
                     $success = $req->execute();
  
@@ -138,7 +121,7 @@ if($result) {
     $get_request = "response=$response";
 }
 else {
-    $get_request = "response=$response&name=$name&year=$year&country_id=$country_id&grapes_id=grapes_id&region=$region&description=$description";
+    $get_request = "response=$response&bottle_id=$bottle_id&year=$year&description=$description";
 }
 
 header("Location: ../php/collection.php?$get_request");

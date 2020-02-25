@@ -164,21 +164,45 @@
             border-radius: 5px;
         }
 
-       #add_new{
+       .add_new{
             @include flex(column, center);
             width: 60%;
             background-color: $rose;
             padding-right:40px;
             padding-left: 40px;
             padding-bottom: 27px;
-            padding-top: 30px;
+            padding-top: 20px;
             margin-top: 30px;
-            margin-bottom: 100px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            .bottle_buttons{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    width: 45%;
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    &:hover{
+                        @include button_hover;
+                    }
+                }
+                .add_bottle{
+                    color: $bordeaux;
+                    background-color: white;
+                    &:hover{
+                        @include button_hover;
+                    }
+                }
+                .cancel_button{
+                    background-color: transparent;
+                }
+            }
             h2{
                 text-align: center;
             }
             label{
-                margin-bottom: 5px;
+                margin-bottom: 0px;
+                margin-top: 5px;
             }
             select{
                 @include input-fields(5px, 5px, 10px); 
@@ -214,6 +238,9 @@
                 height: 30px;
                 @include flex(row, center);
                 align-items: center;
+                &:hover{
+                    @include button_hover;
+                }
                 p{
                     text-decoration: none;
                     margin: 0px;
@@ -225,6 +252,9 @@
                 background-color: $bordeaux;
                 border: 2px solid $bordeaux;
                 cursor: pointer;
+                &:hover{
+                    @include button_hover;
+                }
             }
             #cancel{
                 background-color: transparent;
