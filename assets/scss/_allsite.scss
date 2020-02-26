@@ -87,181 +87,215 @@
     font-family: regular;
     color: white;
     h1{
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-        color: $bordeaux;
-    }
-    .selection{
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: $bordeaux;
+        }
+    .flex-class{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 35%;
-        #selection_form{
-            @include flex(column, center);
-            width: 60%;
-            background-color: rgba(128, 5, 46, 0.9);
-            padding-right:40px;
-            padding-left: 40px;
-            padding-bottom: 27px;
-            padding-top: 50px;
-            margin-top: 30px;
-            select, input{
-                margin-bottom: 10px;
-                margin-top: 5px;
-                padding: 10px;
-                border: 2px solid #c6859d;
-                border-radius: 10px;
-                color: $rouge;
-                font-size: 12px;
-                cursor: pointer;  
-                }
-            button{
-                width: 120px;
-                height: 40px;
-                align-self: flex-end;
-                background-color: transparent;
-                border: 1px solid white;
-                border-radius: 5px;
-                color: white;
-                font-size: 12px;
-                cursor: pointer;
-                margin-top: 10px;
-                }
-        }
-        .buttons{
-            width: 70%;
-            @include flex(row, space-between);
-            form{
-                width: 30%;
+        align-items: flex-start;
+        .selection{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            #selection_form{
+                @include flex(column, center);
+                width: 60%;
+                background-color: rgba(128, 5, 46, 0.9);
+                padding-right:40px;
+                padding-left: 40px;
+                padding-bottom: 27px;
+                padding-top: 50px;
+                margin-top: 30px;
+                select, input{
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                    padding: 10px;
+                    border: 2px solid #c6859d;
+                    border-radius: 10px;
+                    color: $rouge;
+                    font-size: 12px;
+                    cursor: pointer;  
+                    }
                 button{
-                    width: 100%;
-                }
-            }
-            button{
-                width: 30%;
-                font-size: 12px;
-                height: 40px;
-                background-color: $rouge;
-                border: 1px solid $rouge;
-                border-radius: 5px;
-                color: white;
-                font-size: 12px;
-                cursor: pointer;
-                margin-top: 10px;
-                &:hover{
+                    width: 120px;
+                    height: 40px;
+                    align-self: flex-end;
                     background-color: transparent;
-                    border-color: white;
-                    } 
-                }
-        }
-        #response{
-            width: 70%;
-            margin-top: 10px;
-            background-color: $rose;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-       .add_new{
-            @include flex(column, center);
-            width: 60%;
-            background-color: $rose;
-            padding-right:40px;
-            padding-left: 40px;
-            padding-bottom: 27px;
-            padding-top: 20px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            .bottle_buttons{
-                display: flex;
-                justify-content: flex-end;
-                button{
-                    width: 45%;
-                    margin-top: 20px;
+                    border: 1px solid white;
                     border-radius: 5px;
-                    &:hover{
-                        @include button_hover;
+                    color: white;
+                    font-size: 12px;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    }
+            }
+            .buttons{
+                width: 70%;
+                @include flex(row, space-between);
+                form{
+                    width: 30%;
+                    button{
+                        width: 100%;
                     }
                 }
-                .add_bottle{
-                    color: $bordeaux;
-                    background-color: white;
+                button{
+                    width: 30%;
+                    font-size: 12px;
+                    height: 40px;
+                    background-color: $rouge;
+                    border: 1px solid $rouge;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 12px;
+                    cursor: pointer;
+                    margin-top: 10px;
                     &:hover{
-                        @include button_hover;
+                        background-color: transparent;
+                        border-color: white;
+                        } 
+                    }
+            }
+            #response{
+                width: 70%;
+                margin-top: 10px;
+                background-color: $rose;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+           .add_new{
+                @include flex(column, center);
+                width: 60%;
+                background-color: $rose;
+                padding-right:40px;
+                padding-left: 40px;
+                padding-bottom: 27px;
+                padding-top: 20px;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                .bottle_buttons{
+                    display: flex;
+                    justify-content: space-between;
+                    button{
+                        width: 45%;
+                        margin-top: 20px;
+                        border-radius: 5px;
+                        &:hover{
+                            @include button_hover;
+                        }
+                    }
+                    .add_bottle{
+                        color: $bordeaux;
+                        background-color: white;
+
+                        &:hover{
+                            @include button_hover;
+                        }
+                    }
+                    .cancel_button{
+                        background-color: transparent;
                     }
                 }
-                .cancel_button{
-                    background-color: transparent;
+                h2{
+                    text-align: center;
                 }
-            }
-            h2{
-                text-align: center;
-            }
-            label{
-                margin-bottom: 0px;
-                margin-top: 5px;
-            }
-            select{
-                @include input-fields(5px, 5px, 10px); 
-            }
-            input[type="text"], input[type="number"], textarea{
-                @include input-fields(5px, 10px, 12px);
-            }
-            p{
-                margin-top: 0;
-                text-align: right;
-                text-decoration: underline;
-                cursor: pointer;
-            }
-            input[type="file"] {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0,0,0,0);
-                border: 0;
-            }
-            .custom-file-upload {
-                border: 2px solid $bordeaux;
-                color: $bordeaux;
-                background-color: white;
-                display: inline-block;
-                padding: 6px 12px;
-                cursor: pointer;
-                text-align: center;
-                margin: 10px 0px;
-                height: 30px;
-                @include flex(row, center);
-                align-items: center;
-                &:hover{
-                    @include button_hover;
+                label{
+                    margin-bottom: 0px;
+                    margin-top: 5px;
+                }
+                select{
+                    @include input-fields(5px, 5px, 10px); 
+                }
+                input[type="text"], input[type="number"], textarea{
+                    @include input-fields(5px, 10px, 12px);
                 }
                 p{
-                    text-decoration: none;
-                    margin: 0px;
+                    margin-top: 0;
+                    text-align: right;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                input[type="file"] {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0,0,0,0);
+                    border: 0;
+                }
+                .custom-file-upload {
+                    border: 2px solid $bordeaux;
+                    color: $bordeaux;
+                    background-color: white;
+                    display: inline-block;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    text-align: center;
+                    margin: 10px 0px;
+                    height: 30px;
+                    @include flex(row, center);
+                    align-items: center;
+                    &:hover{
+                        @include button_hover;
+                    }
+                    p{
+                        text-decoration: none;
+                        margin: 0px;
+                    }
+                }
+                button{
+                    height: 40px;
+                    color: white;
+                    background-color: $bordeaux;
+                    border: 2px solid $bordeaux;
+                    cursor: pointer;
+                    &:hover{
+                        @include button_hover;
+                    }
+                }
+                #cancel{
+                    background-color: transparent;
+                    margin-top: 10px; 
+                }
+            }    
+        }
+        .product_list{
+            width:60%;
+            display: flex;
+            flex-wrap: wrap;
+            .product_container{
+                margin: 30px;
+                width: 240px;
+                text-align: center;
+                background-color: rgba(255,255,255,0.8);
+                padding: 50px 30px;
+                border-radius: 10px;
+                h4{
+                    color: $bordeaux;
+                }
+                p{
+                    color: $rouge;
+                    margin-bottom: 0;
+                }
+                .bottle_image{
+                    width: 50%;
+                }
+                .description{
+                    height: 55px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
                 }
             }
-            button{
-                height: 40px;
-                color: white;
-                background-color: $bordeaux;
-                border: 2px solid $bordeaux;
-                cursor: pointer;
-                &:hover{
-                    @include button_hover;
-                }
-            }
-            #cancel{
-                background-color: transparent;
-                margin-top: 10px; 
-            }
-        }    
+        }
     }
+    
 }
 
 
