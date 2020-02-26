@@ -292,6 +292,49 @@
                     overflow: hidden;
                     margin-bottom: 10px;
                 }
+                .popup {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: $rose;
+                    .popuptext{
+                        display: none;
+                        width: 250px;
+                        background-color: $rose;
+                        color: white;
+                        text-align: center;
+                        border-radius: 10px;
+                        padding: 30px 30px 50px 30px;
+                        position: absolute;
+                        z-index: 52;
+                        bottom: 125%;
+                        left: 110%;
+                        margin-left: -80px;
+                        .quit_icon{
+                            text-align: right;
+                            .far{
+                                font-size: 20px;
+                            }
+                        }
+                        p{
+                            color: white;
+                        }
+                        .bottle_image{
+                            width: 50%;
+                            padding-top: 30px;
+                        }
+                    }
+                    .popup .popuptext::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: #555 transparent transparent transparent;
+                    }
+                }
             }
         }
     }

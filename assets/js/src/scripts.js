@@ -22,4 +22,18 @@ $(function(){
         $('#choose_bottle').slideUp('slow');
     });
 
+    $('.popup').click(function(e){
+        e.stopPropagation();
+        $(this).children('.popuptext').fadeIn('fast');
+    });
+
+    $('body').click(function(event) {
+        $('.popuptext').fadeOut('fast');
+    });
+
+    $('.far').click(function(e){
+        e.stopPropagation();
+        $(this).parents('.popuptext').hide();
+    });
+
 });

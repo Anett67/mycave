@@ -23,7 +23,23 @@ while($data = $req->fetch()){ ?>
     <div class="description">
         <p><?php echo $data['description']; ?></p>
     </div>
-    <a href="">Read More</a>
+
+    <div class="popup">Read More
+        <span class="popuptext">
+            <div class="quit_icon">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <img class="bottle_image" src="<?php echo 'http://localhost/mycave/upload/' . $data['file_url']; ?> " alt="photo of wine bottle">
+            <h4><?php echo $data['bottle_name']; ?></h4>
+            <p><?php echo $data['grapes']; ?></p>
+            <p><?php echo $data['country']; ?></p>
+            <p><?php echo $data['region']; ?></p>
+            <p><?php echo $data['year']; ?></p>
+            <div class="description_popup">
+                <p><?php echo $data['description']; ?></p>
+            </div> 
+        </span>
+    </div>
 </div>
 
 

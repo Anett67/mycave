@@ -7,7 +7,7 @@
     <h1>Collection</h2>
     <div class="flex-class">
         <div class="selection">
-            <form id="selection_form" action="../request/select-post.php" method="post">
+            <form id="selection_form" action="../request/select_post.php" method="post">
 
                 <label for="country">Select country</label>
                 <select name="country_choose" id="country_choose">
