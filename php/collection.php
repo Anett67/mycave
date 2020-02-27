@@ -13,7 +13,7 @@
             <?php 
 
                 if(isset($_GET['response'])){
-                    echo '<div id="response">' . $_GET['response'] . '</div>';
+                    echo '<div id="response">' . $_GET['response'] . '<i class="fas fa-times hide_response"></i></div>';
                 } 
             ?>
             <!-- Formulaire pour modifier et rajouter des produits avec description, année et photo -->
@@ -23,7 +23,9 @@
             <!-- FORMULAIRE POUR ENREGISTRER UNE NOUVELLE BOUTEILLE -->
 
             <?php require 'new_wine_form.php'; ?>
-
+        
+            <?php require '../php/update_form.php'; ?>
+            
         </div>
 
         <!-- Affichage des bouteilles -->
@@ -32,7 +34,8 @@
 
             <?php require '../request/products_read.php'; ?>
 
-        </div>    
+        </div>
+
     </div>
 </div>
 

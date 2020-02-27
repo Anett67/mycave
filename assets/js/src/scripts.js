@@ -36,4 +36,14 @@ $(function(){
         $(this).parents('.popuptext').hide();
     });
 
+    $('.delete_link').click(function(e){
+        if(!confirm("Are you sure wou want to delete this item?")){
+            e.preventDefault();
+        }
+    });
+
+    $('.hide_response').click(function(){
+        $('#response').hide();
+    });    
+
 });

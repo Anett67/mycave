@@ -43,12 +43,16 @@ while($data = $req->fetch()){ ?>
     </div>
     <?php if(isset($_SESSION['id'])){?>
         
-        <div class="icons">
-            <a href="../request/edit_post.php?id_url=<?php echo $data['id'] ?>" ><i class="fas fa-pencil-alt"></i></a>
-            <a href="../request/delete_post.php?id_url=<?php echo $data['id'] ?>"><i class="fas fa-trash-alt"></i></a>
-        </div>
+    <div class="icons">
+        <a href="../request/edit_post.php?id_url=<?php echo $data['id'] ?>" class="edit_link"><i class="fas fa-pencil-alt"></i></a>
+        <a href="../request/delete_post.php?id_url=<?php echo $data['id'] ?>" class="delete_link"><i class="fas fa-trash-alt"></i></a>
+    </div>
             
     <?php } ?>
+
+    <div class="update_form">
+        <?php require '../php/update_form.php'; ?>
+    </div>
     
 
 </div>

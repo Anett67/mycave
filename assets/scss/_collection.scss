@@ -89,6 +89,12 @@
                 background-color: $rose;
                 padding: 5px 10px;
                 border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                i{
+                    cursor: pointer;
+                }
             }
 
            .add_new{
