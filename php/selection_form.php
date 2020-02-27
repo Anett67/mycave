@@ -23,10 +23,5 @@
              ?>
             <div class="buttons">
                 <button id="add_new_button">ADD NEW WINE</button>
-                <button type="submit">EDIT</button>
-                
-                <form action="">
-                     <button type="submit">DELETE</button>
-                </form>
             </div>
             <?php endif; ?>

@@ -5,6 +5,7 @@ require 'connect.php';
 $req = $bdd->query(' 
     SELECT *
     FROM bottles
+    ORDER BY bottle_name
 ');
     
     while($data = $req->fetch()): ?>
