@@ -24,8 +24,6 @@
 
             <?php require 'new_wine_form.php'; ?>
         
-            <?php require '../php/update_form.php'; ?>
-            
         </div>
 
         <!-- Affichage des bouteilles -->

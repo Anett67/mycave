@@ -150,36 +150,8 @@
                     text-decoration: underline;
                     cursor: pointer;
                 }
-                input[type="file"] {
-                    position: absolute;
-                    width: 1px;
-                    height: 1px;
-                    padding: 0;
-                    margin: -1px;
-                    overflow: hidden;
-                    clip: rect(0,0,0,0);
-                    border: 0;
-                }
-                .custom-file-upload {
-                    border: 2px solid $bordeaux;
-                    color: $bordeaux;
-                    background-color: white;
-                    display: inline-block;
-                    padding: 6px 12px;
-                    cursor: pointer;
-                    text-align: center;
-                    margin: 10px 0px;
-                    height: 30px;
-                    @include flex(row, center);
-                    align-items: center;
-                    &:hover{
-                        @include button_hover;
-                    }
-                    p{
-                        text-decoration: none;
-                        margin: 0px;
-                    }
-                }
+                @include upload_button($bordeaux, $bordeaux, white);
+                
                 button{
                     height: 40px;
                     color: white;
@@ -190,7 +162,7 @@
                         @include button_hover;
                     }
                 }
-                #cancel{
+                .cancel{
                     background-color: transparent;
                     margin-top: 10px; 
                 }

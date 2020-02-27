@@ -4,7 +4,7 @@
 
  ?>
 
-<section id="connect_form">
+<section class="connect_form">
     
     <form action="../request/login_post.php" method="post">
         

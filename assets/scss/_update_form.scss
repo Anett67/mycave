@@ -1,0 +1,76 @@
+.update_form{
+    height: 100vh;
+    font-family: regular;
+    background-image: url("../img/background_edit_page.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px 80px;  
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: $rose;
+        padding: 30px;
+        width: 300px;
+        height: auto;
+        h2{
+            text-align: center;
+        }
+        h3{
+            color: white;
+            text-align: center;
+        }
+        .response{
+            p{
+              text-align: center;
+              background-color: $rouge;
+              color: white; 
+              padding: 5px;
+              border-radius: 20px; 
+            } 
+        }
+        input, textarea, select{
+            @include input-fields(10px, 5px, 10px);
+        }
+        textarea{
+            height: 200px;
+        }
+        .image_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #current_image{
+                width: 50%;
+                margin: 5px;
+            }
+        }
+        @include upload_button($bordeaux, $bordeaux, white);
+        .cancel_change{
+            background-color: transparent;
+            margin-top: 10px;
+            height: 40px;
+            border: 2px solid $bordeaux;
+            cursor: pointer;
+            text-align: center;
+            align-content: middle;
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover{
+                color: $bordeaux;
+                }
+            }
+        }
+        .save_button{
+            height: 40px;
+            color: white;
+            background-color: $bordeaux;
+            border: 2px solid $bordeaux;
+            cursor: pointer;
+            &:hover{
+                @include button_hover;
+            }
+        }
+    }
+    
+}

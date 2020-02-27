@@ -1,30 +1,22 @@
-<form action="../request/form_post.php" method="post" class="add_new" id="choose_bottle" enctype="multipart/form-data">
-
-                <h2>Add New Product</h2>
+<form action="../request/new_bottle_post.php" method="post" class="add_new" id="new_bottle">
                 
-                <label for="select_bottle">Choose a bottle or add a new one</label>
-                <select name="select_bottle" id="select_bottle">
+                <h2>Add New Bottle</h2>
 
-                    <option value="0">Choose a bottle</option>
-                    <?php require '../request/bottle_select.php'; ?>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
 
-                </select>
+                <label for="new_country">Country</label>
+                <input type="text" id="new_country" name="new_country">
+
+                <label for="region">Region</label>
+                <input type="text" id="region" name="region">
+
+                <label for="new_grapes">Grapes</label>
+                <input type="text" id="new_grapes" name="new_grapes">
                 
                 <div class="bottle_buttons">
-                    <button class="add_bottle">Add new bottle</button>
+                    <button class="cancel_button">Cancel</button>
+                    <button type="submit">Save</button>
                 </div>
+            </form>                
 
-                <label for="year_new">Year</label>
-                <input type="number" name="year_new" id="year_new">                
-
-                <label for="description">Description</label>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
-
-                <label for="file-upload" class="custom-file-upload">
-                    <p>Add photo</p>
-                </label>
-                <input id="file-upload" type="file" name="file_upload" />
-                
-                <button type="submit">Save</button>
-                <button id="cancel">Cancel</button>
-            </form>
