@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <img src="<?php echo SITE_URL."assets/img/logo_blanc1.png" ?>" alt="">
+            <a href=" <?php echo SITE_URL . 'index.php' ?> "><img src="<?php echo SITE_URL."assets/img/logo_blanc1.png" ?>" alt=""></a>   
         </nav>
     </header>
 

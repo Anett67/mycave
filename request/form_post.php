@@ -43,7 +43,7 @@ else:
             $req->bindValue(':bottle_id', $bottle_id, PDO:: PARAM_INT);
             $req->bindValue(':year', $year, PDO:: PARAM_INT);
             $req->bindValue(':description', $description, PDO:: PARAM_STR);
-            $req->bindValue(':file_url', "", PDO:: PARAM_STR);
+            $req->bindValue(':file_url', "../upload/generic.jpg", PDO:: PARAM_STR);
 
             $success = $req->execute();
 

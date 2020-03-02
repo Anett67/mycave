@@ -7,6 +7,7 @@ $req = $bdd->prepare('
     FROM bottles AS b
     INNER JOIN bottle_collection AS bc   
     ON  bc.bottle_id = b.id
+    LIMIT '.($current_page-1)*$per_page.','.$per_page.'
 ');
 
 $req->execute();

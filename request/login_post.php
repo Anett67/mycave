@@ -25,21 +25,17 @@ $password       = trim(strip_tags($_POST['password']));
             $_SESSION['id'] = $result['id'];
             $_SESSION['identifiant'] = $result['identifiant'];
 
-            $msg_success = 'Vous êtes bien connecté';
-
+            $response = 'Vous êtes bien connecté';
+        }else{
+            $response = "L'email ou le mot de passe n'est pas valide";
         }
     }else{
-        $msg_error = "L'email ou le mot de passe n'est pas valide";
+        $response = "L'email ou le mot de passe n'est pas valide";
     }    
 }else{
-    $msg_error = "L'email ou le mot de passe n'est pas valide";
+    $response = "L'email ou le mot de passe n'est pas valide";
 }
 
-if(isset($msg_error)){
-    $get_result = "msg=$msg_error&email=$email&result=0";
-}else{
-    $get_result = "msg=$msg_success&result=1";
-} 
-header('Location: '.SITE_URL);
+header('Location: ' .SITE_URL. 'php/admin.php?msg=' . $response);
 
  ?>
