@@ -13,7 +13,7 @@
 
                 <label for="new_grapes">Grapes</label>
                 <input type="text" id="new_grapes" name="new_grapes">
-                
+
                 <div class="bottle_buttons">
                     <button class="cancel_button">Cancel</button>
                     <button type="submit">Save</button>

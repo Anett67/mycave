@@ -1,13 +1,6 @@
-<?php 
 
-    
 
-    // $years = $bdd->query('   
-    //     SELECT DISTINCT year
-    //     FROM bottle_collection 
-    // ');
 
- ?>       
 
               <form id="selection_form" action="../request/select_post.php" method="post">
 

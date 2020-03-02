@@ -51,9 +51,8 @@ else {
     $get_request = "response=$response&name=$name&country=$country&grapes=grapes&region=$region";
 }
 
-var_dump($_POST);
 
-header('Location: ../php/collection.php?$get_request');
+header('Location: ../php/collection.php?' . $get_request);
 
  ?>
 

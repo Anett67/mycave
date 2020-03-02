@@ -3,7 +3,7 @@
 
 <?php 
 
-$bottle_id      = strip_tags($_POST['select_bottle']);
+$bottle_id      = intval($_POST['select_bottle']);
 $year           = intval($_POST['year_new']);
 $description    = strip_tags($_POST['description']);
 $file           = $_FILES['file_upload'];
@@ -124,7 +124,7 @@ else {
     $get_request = "response=$response&bottle_id=$bottle_id&year=$year&description=$description";
 }
 
-header("Location: ../php/collection.php?$get_request");
+header("Location: ../php/collection.php?" . $get_request);
 
 
  ?>
