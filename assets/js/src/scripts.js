@@ -46,5 +46,24 @@ $(function(){
         $('#response').hide();
     }); 
 
+    // ------------------------------SCROLLTOP------------------------------------
+
+    var btn = $('.scrolltop');
+
+    $(window).scroll(function(){
+        var windowHeight = $(window).height();
+        var scrollTop = $(this).scrollTop();
+          if(scrollTop > 500){
+            btn.fadeIn(500);
+          }else{
+            btn.fadeOut(500);
+          }
+    })
+
+    btn.click(function(){
+      $('html, body').animate({scrollTop: 0}, 'slow');
+
+    })
+
 
 });

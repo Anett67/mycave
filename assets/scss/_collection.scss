@@ -34,6 +34,10 @@
                 padding-bottom: 27px;
                 padding-top: 50px;
                 margin-top: 30px;
+                .filter{
+                    display: flex;
+                    flex-direction: column;
+                }
                 select, input{
                     margin-bottom: 10px;
                     margin-top: 5px;
@@ -179,8 +183,9 @@
                 flex-wrap:wrap;
                 justify-content:space-around;
                 .product_container{
-                    margin: 30px;
-                    width: 240px;
+                    min-width: 240px;
+                    width: 200px;
+                    margin-bottom: 50px;
                     text-align: center;
                     background-color: rgba(255,255,255,0.8);
                     padding: 50px 30px;
@@ -215,9 +220,9 @@
                             padding: 30px 30px 50px 30px;
                             position: absolute;
                             z-index: 52;
-                            bottom: 125%;
-                            left: 110%;
-                            margin-left: -80px;
+                            bottom: -80px;
+                            left: -50px;
+                            margin-left: -50px;
                             .quit_icon{
                                 text-align: right;
                                 .far{
@@ -228,7 +233,7 @@
                                 color: white;
                             }
                             .bottle_image{
-                                width: 50%;
+                                width: 80%;
                                 padding-top: 30px;
                             }
                         }
@@ -279,6 +284,13 @@
                 }
             }
         }
+    }
+    .scrolltop{
+        font-size: 2rem;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        cursor: pointer;
     }   
 }
 

@@ -84,6 +84,9 @@
         </div>
 
     </div>
+
+    <i class="fas fa-angle-double-up scrolltop"></i>
+
 </div>
 
 <?php require 'footer.php'; ?>
