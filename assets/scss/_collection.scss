@@ -25,45 +25,10 @@
             justify-content: center;
             align-items: center;
             width: 35%;
-            #selection_form{
-                @include flex(column, center);
-                width: 60%;
-                background-color: rgba(128, 5, 46, 0.9);
-                padding-right:40px;
-                padding-left: 40px;
-                padding-bottom: 27px;
-                padding-top: 50px;
-                margin-top: 30px;
-                .filter{
-                    display: flex;
-                    flex-direction: column;
-                }
-                select, input{
-                    margin-bottom: 10px;
-                    margin-top: 5px;
-                    padding: 10px;
-                    border: 2px solid #c6859d;
-                    border-radius: 10px;
-                    color: $rouge;
-                    font-size: 12px;
-                    cursor: pointer;  
-                    }
-                button{
-                    width: 120px;
-                    height: 40px;
-                    align-self: flex-end;
-                    background-color: transparent;
-                    border: 1px solid white;
-                    border-radius: 5px;
-                    color: white;
-                    font-size: 12px;
-                    cursor: pointer;
-                    margin-top: 10px;
-                    }
-            }
+
             .buttons{
                 width: 70%;
-                @include flex(row, space-between);
+                @include flex(column, center);
                 form{
                     width: 30%;
                     button{

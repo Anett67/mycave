@@ -7,30 +7,30 @@
         .flex-class{
             flex-direction: column;
             .selection{
+                @include flex(column, center);
                 width: 100%;
                 margin-bottom: 50px;
                 #selection_form{
-                    @include flex(row, space-around);
-                    flex-wrap: wrap;
+                    @include flex(column, center);
                     align-items: middle;
                     width: 100%;
                     margin-top: 0px;
                     background-color: $rouge;
                     padding: 20px 0;
-                    .filter{
-                        display: flex;
-                        flex-direction: column;
-                        width: 30%;
-                        min-width: 150px;
+                    label{
+                        display: block;
+                        align-self: center;
                     }
-                    .apply_filters{
-                        width: 100%;
-                        text-align: right;
-                        button{
-                            width: 20%;
-                            margin-right: 15px;
-                        }
+                    select{
+                        width: 50%;
+                        align-self: center;
                     }
+                    button{
+                        width: 20%;
+                        margin-right: 15px;
+                        align-self: center;
+                    }
+
                 }
                 .buttons{
                     background-color: $bordeaux;
@@ -92,15 +92,12 @@
                 #selection_form{
                     flex-direction: column;
                     align-items: center;
-                    .filter{
-                        width: 80%;
+                    select{
+                        width: 70%;
                     }
-                    .apply_filters{
-                        text-align: center;
-                        button{
-                            width: 80%;
-                            margin-right: 0;
-                        }
+                    button{
+                        width: 70%;
+                        margin-right: 0;
                     }
                 }
                 .buttons{
@@ -108,7 +105,7 @@
                     align-items: center;
                     padding: 20px 0px;
                     button{
-                        width: 80%;
+                        width: 70%;
                     }
                 }
             }  

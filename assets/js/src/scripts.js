@@ -46,6 +46,48 @@ $(function(){
         $('#response').hide();
     }); 
 
+    //------------------AJAX POUR TRIER LES PRODUITS--------------------
+
+    $('#search').on('input', function(){
+
+        var recherche = $(this).val();
+
+        if(recherche.length >= 3){
+
+            $.post(
+                '../request/ajax_search.php',
+                {
+                    recherche: recherche
+                },
+                function(response){
+                    $('.bottles').html(response);
+                } 
+            )
+        }
+    });
+    
+    $('#selection_form').submit(function(event){
+        event.preventDefault();
+
+        var country     = $('#country_choose').val();
+        var year        = $('#year_choose').val();
+        var grapes      = $('#grapes_choose').val();
+
+        $.post(
+            '../request/select_post.php',
+            {
+                country: country,
+                year: year,
+                grapes: grapes
+            },
+            function(response){
+                $('.bottles').html(response);
+            }
+
+        )
+
+    });
+
     // ------------------------------SCROLLTOP------------------------------------
 
     var btn = $('.scrolltop');
@@ -64,6 +106,8 @@ $(function(){
       $('html, body').animate({scrollTop: 0}, 'slow');
 
     })
+
+
 
 
 });
