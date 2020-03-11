@@ -71,7 +71,7 @@ $(function(){
             }
         });
     };
-
+    
     $('#search').on('input', function(){
 
         var recherche = $(this).val();

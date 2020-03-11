@@ -1,10 +1,9 @@
 <?php
-
-require 'connect.php'; 
-
-if(!isset($_SESSION['id'])){
-    require 'param.php';
-}
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+    require 'connect.php'; 
 
 $req = $bdd->query('  
             SELECT COUNT(id) AS nb_bottles
@@ -73,7 +72,6 @@ while($data = $req->fetch()){ ?>
     </div>
             
     <?php } ?>
-
     
 </div>
 
@@ -82,3 +80,4 @@ while($data = $req->fetch()){ ?>
 }
 
 ?>
+

@@ -1,10 +1,10 @@
+
 <?php require 'connect.php'; 
+
+require 'param.php';
 
 $year = intval($_POST['year']);
 
-if(!isset($_SESSION['id'])){
-    require 'param.php';
-}
 
 $req = $bdd->prepare('  
    SELECT b.bottle_name, b.grapes, b.country, b.region, bc.id, bc.year, bc.description, bc.file_url

@@ -1,4 +1,4 @@
-<?php require '../request/param.php' ?>
+<?php require '../request/param.php'; ?>
 <?php require 'header.php'; ?>
 <?php require '../request/connect.php'; ?>
 
