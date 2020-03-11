@@ -22,21 +22,21 @@ $(function(){
         $('#choose_bottle').slideUp('slow');
     });
 
-    $('.popup').click(function(e){
+    $('.popup').on('click', function(e){
         e.stopPropagation();
         $(this).children('.popuptext').fadeIn('fast');
     });
 
-    $('body').click(function(event) {
+    $('body').on('click', function(event) {
         $('.popuptext').fadeOut('fast');
     });
 
-    $('.far').click(function(e){
+    $('.far').on('click', function(e){
         e.stopPropagation();
         $(this).parents('.popuptext').hide();
     });
 
-    $('.delete_link').click(function(e){
+    $('.delete_link').on('click',function(e){
         if(!confirm("Are you sure you want to delete this item?")){
             e.preventDefault();
         }
@@ -47,6 +47,30 @@ $(function(){
     }); 
 
     //------------------AJAX POUR TRIER LES PRODUITS--------------------
+
+    function pageLoad(response){
+        $('.bottles').html(response);
+        $('.product_container').css('margin', '20px');
+        $('.popup').on('click', function(e){
+            e.stopPropagation();
+            $(this).children('.popuptext').fadeIn('fast');
+        });
+
+        $('body').click(function(event) {
+            $('.popuptext').fadeOut('fast');
+        });
+
+        $('.far').click(function(e){
+            e.stopPropagation();
+            $(this).parents('.popuptext').hide();
+        });
+
+        $('.delete_link').click(function(e){
+            if(!confirm("Are you sure you want to delete this item?")){
+                e.preventDefault();
+            }
+        });
+    };
 
     $('#search').on('input', function(){
 
@@ -60,32 +84,49 @@ $(function(){
                     recherche: recherche
                 },
                 function(response){
-                    $('.bottles').html(response);
-                } 
+                    pageLoad(response);
+                    $('.pagination').hide();
+                }
+            )
+        }else{
+
+            $.post(
+                '../request/products_read.php',
+                {},
+                function(response){
+                    pageLoad(response);
+                    $('.pagination').show();
+                }
             )
         }
     });
     
-    $('#selection_form').submit(function(event){
-        event.preventDefault();
+    $('#year_select').on('change', function(event){
 
-        var country     = $('#country_choose').val();
-        var year        = $('#year_choose').val();
-        var grapes      = $('#grapes_choose').val();
+        var year = $('#year_select').val();
 
-        $.post(
-            '../request/select_post.php',
-            {
-                country: country,
-                year: year,
-                grapes: grapes
-            },
-            function(response){
-                $('.bottles').html(response);
-            }
+        if(year != 0){
+            $.post(
+                '../request/select_post.php',
+                {
+                    year: year,
+                },
+                function(response){
+                    pageLoad(response);
+                    $('.pagination').hide();
+                }
+            )
+        }else{
 
-        )
-
+           $.post(
+                '../request/products_read.php',
+                {},
+                function(response){
+                    pageLoad(response);
+                    $('.pagination').show();
+                }
+            )
+        }
     });
 
     // ------------------------------SCROLLTOP------------------------------------

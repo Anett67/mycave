@@ -6,36 +6,23 @@
         }
         .flex-class{
             flex-direction: column;
+            justify-content: center;
             .selection{
                 @include flex(column, center);
                 width: 100%;
                 margin-bottom: 50px;
-                #selection_form{
-                    @include flex(column, center);
-                    align-items: middle;
-                    width: 100%;
-                    margin-top: 0px;
-                    background-color: $rouge;
-                    padding: 20px 0;
-                    label{
-                        display: block;
-                        align-self: center;
-                    }
-                    select{
-                        width: 50%;
-                        align-self: center;
-                    }
-                    button{
-                        width: 20%;
-                        margin-right: 15px;
-                        align-self: center;
-                    }
+                #search_field{
 
+                    width: 100%;
+                    input{
+                        width: 40%;
+                    }
                 }
                 .buttons{
                     background-color: $bordeaux;
                     width: 100%;
                     display: flex;
+                    align-items: center;
                     justify-content: space-around;
                     button{
                         background-color: $rouge;
@@ -69,6 +56,15 @@
 @media all and(max-width: 695px){
     .products{
         .flex-class{
+            .selection{
+                #search_field{
+                    @include flex(column, center);
+                    align-items: center;
+                    button{
+                        width: 20%;
+                    }
+                }
+            }
             .product_list{
                 .bottles{
                     .product_container{
@@ -108,6 +104,13 @@
                         width: 70%;
                     }
                 }
+            }
+            .product_list{
+                .ajax{
+                    .product_container{
+                        width: 80%;
+                    }
+                } 
             }  
         }
     }

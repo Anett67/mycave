@@ -52,34 +52,37 @@
 
         <div class="product_list">
             
-            <div class="bottles">
-                <?php require '../request/products_read.php'; ?>
-            </div>
-            
-            <ul class="pagination">
+            <div class="ajax">
+                
+                <div class="bottles">
+                    <?php require '../request/products_read.php'; ?>
+                </div>
 
-                <?php if($current_page == 1): ?>
-                    <li class="disabled"><a href="#"><i class="fas fa-chevron-left"></i></a></li>
-                <?php else: ?>
-                    <li><a href="collection.php?page= <?php echo $current_page-1 ?>"><i class="fas fa-chevron-left"></i></a></li>
-                <?php endif; ?>
+                <ul class="pagination">
 
-                <?php for($i = 1; $i <= $nb_pages; $i ++){
-
-                    if($i == $current_page): ?>
-                       <li class="active"><a href="#"><?php echo $i; ?></a></li>
+                    <?php if($current_page == 1): ?>
+                        <li class="disabled"><a href="#"><i class="fas fa-chevron-left"></i></a></li>
                     <?php else: ?>
-                        <li class="waves-effect"><a href="collection.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-                    <?php endif; ?> 
-                <?php } ?>
-                
-                <?php if($current_page == $nb_pages): ?>
-                    <li class="disabled"><a href="#"><i class="fas fa-chevron-right"></i></a></li>
-                <?php else: ?>
-                    <li><a href="../php/collection.php?page= <?php echo $current_page+1 ?>"><i class="fas fa-chevron-right"></i></a></li>
-                <?php endif; ?>
-                
-            </ul>
+                        <li><a href="collection.php?page= <?php echo $current_page-1 ?>"><i class="fas fa-chevron-left"></i></a></li>
+                    <?php endif; ?>
+
+                    <?php for($i = 1; $i <= $nb_pages; $i ++){
+
+                        if($i == $current_page): ?>
+                           <li class="active"><a href="#"><?php echo $i; ?></a></li>
+                        <?php else: ?>
+                            <li class="waves-effect"><a href="collection.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                        <?php endif; ?> 
+                    <?php } ?>
+                    
+                    <?php if($current_page == $nb_pages): ?>
+                        <li class="disabled"><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+                    <?php else: ?>
+                        <li><a href="../php/collection.php?page= <?php echo $current_page+1 ?>"><i class="fas fa-chevron-right"></i></a></li>
+                    <?php endif; ?>
+                    
+                </ul>
+            </div>
 
         </div>
 

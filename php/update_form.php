@@ -44,8 +44,8 @@ $req = $bdd->prepare('
         <label for="file" class="custom-file-upload">
             <p>Change photo</p>
         </label>
-        <input id="file" type="file" name="file_upload" />
-        
+        <input id="file" type="file" name="file_upload" accept='image/*'/>
+
         <button class="save_button" type="submit">Save</button>
         <button class="cancel_change"><a href="collection.php">Cancel</a></button>
      </form>

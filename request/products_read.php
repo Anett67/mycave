@@ -1,6 +1,27 @@
-<?php 
+<?php
 
 require 'connect.php'; 
+
+if(!isset($_SESSION['id'])){
+    require 'param.php';
+}
+
+$req = $bdd->query('  
+            SELECT COUNT(id) AS nb_bottles
+            FROM bottle_collection  
+        ');
+
+        $data = $req->fetch();
+
+        $nb_bottles = $data['nb_bottles'];
+        $per_page = 6;
+        $nb_pages = ceil($nb_bottles/$per_page);
+
+        if(isset($_GET['page']) && $_GET['page'] > 0 && $_GET['page'] <= $nb_pages):
+            $current_page = $_GET['page'];
+        else:
+            $current_page = 1;
+        endif;
 
 $req = $bdd->prepare('  
     SELECT b.bottle_name, b.grapes, b.country, b.region, bc.id, bc.year, bc.description, bc.file_url
