@@ -44,7 +44,21 @@ $req = $bdd->prepare('
         <label for="file" class="custom-file-upload">
             <p>Change photo</p>
         </label>
-        <input id="file" type="file" name="file_upload" accept='image/*'/>
+        <input id="file" type="file" name="file_upload" accept='image/*' onchange='openFile(event)'/>
+    
+        <script>
+            var openFile = function(event) {
+            var input = event.target;
+
+            var reader = new FileReader();
+            reader.onload = function(){
+                var dataURL = reader.result;
+                var output = document.getElementById('current_image');
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+          };
+        </script>
 
         <button class="save_button" type="submit">Save</button>
         <button class="cancel_change"><a href="collection.php">Cancel</a></button>

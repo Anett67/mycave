@@ -23,7 +23,7 @@ $req = $bdd->query('
         <?php endwhile; ?>
 
     </select>
-    <button id="view_all"><a href="collection.php">View all</a></button>
+
 </div>
 
 <?php if(isset($_SESSION['id'])):?>

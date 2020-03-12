@@ -1,4 +1,4 @@
-$(function(){
+(function($){
 
     // Cacher le formulaire pour ajouter une bouteille et afficher le au click
 
@@ -102,8 +102,7 @@ $(function(){
     });
     
     $('#year_select').on('change', function(event){
-
-        var year = $('#year_select').val();
+   var year = $('#year_select').val();
 
         if(year != 0){
             $.post(
@@ -151,4 +150,4 @@ $(function(){
 
 
 
-});
+})(jQuery);
