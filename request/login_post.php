@@ -1,8 +1,6 @@
 <?php require 'param.php'; ?>
 <?php require 'connect.php'; ?>
-
 <?php 
-
 $identifiant    = trim(strip_tags($_POST['identifier']));
 $password       = trim(strip_tags($_POST['password']));
 
@@ -35,7 +33,5 @@ $password       = trim(strip_tags($_POST['password']));
 }else{
     $response = "L'email ou le mot de passe n'est pas valide";
 }
-
-header('Location: ' .SITE_URL. 'php/admin.php?msg=' . $response);
-
- ?>
+?>
+<?php header("Location: " . SITE_URL. "php/admin.php?msg=" . $response); ?>

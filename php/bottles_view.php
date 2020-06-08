@@ -1,7 +1,7 @@
-<div class="product_container">
+<div class="product_container col-lg-3 col-8 m-2">
     
-    <img class="bottle_image" src="<?php echo 'http://localhost/mycave/upload/' . $data['file_url']; ?> " alt="photo of wine bottle">
-    <h4><?php echo $data['bottle_name']; ?></h4>
+    <img class="bottle_image " src="<?php echo 'http://mycave.anettdavid.fr/upload/' . $data['file_url']; ?> " alt="photo of wine bottle">
+    <h4 class="mt-3"><?php echo $data['bottle_name']; ?></h4>
     <p><?php echo $data['grapes']; ?></p>
     <p><?php echo $data['country']; ?></p>
     <p><?php echo $data['region']; ?></p>
@@ -15,7 +15,7 @@
             <div class="quit_icon">
                 <i class="far fa-times-circle"></i>
             </div>
-            <img class="bottle_image" src="<?php echo 'http://localhost/mycave/upload/' . $data['file_url']; ?> " alt="photo of wine bottle">
+            <img class="bottle_image" src="<?php echo 'http://mycave.anettdavid.fr/upload/' . $data['file_url']; ?> " alt="photo of wine bottle">
             <h4><?php echo $data['bottle_name']; ?></h4>
             <p><?php echo $data['grapes']; ?></p>
             <p><?php echo $data['country']; ?></p>

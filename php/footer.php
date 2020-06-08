@@ -1,11 +1,11 @@
-<?php require SITE_URL."request/param.php"; ?>
+
 
 <footer>
 
     <?php if(isset($_SESSION['id'])): ?>
-        <a href="<?php echo SITE_URL."request/disconnect.php" ?>">Log Out</a>
+        <a class="col-10 col-lg-2" href="<?php echo SITE_URL."request/disconnect.php" ?>">Log Out</a>
     <?php else: ?>
-        <a href= "<?php echo SITE_URL."php/admin.php" ?>" >Admin Page</a>
+        <a class="col-10 col-lg-2" href= "<?php echo SITE_URL."php/admin.php" ?>" >Admin Page</a>
     <?php endif; ?>
 
 </footer>

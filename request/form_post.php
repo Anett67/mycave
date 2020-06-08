@@ -1,15 +1,11 @@
 <?php require 'param.php'; ?>
 <?php require 'connect.php'; ?>
-
 <?php 
 
 $bottle_id      = intval($_POST['select_bottle']);
 $year           = intval($_POST['year_new']);
 $description    = strip_tags($_POST['description']);
 $file           = $_FILES['file_upload'];
-
-var_dump($bottle_id, $year, $description, $file['tmp_name']);
-
 
 if($bottle_id === 0):
     $result = false;
@@ -123,7 +119,6 @@ if($result) {
 else {
     $get_request = "response=$response&bottle_id=$bottle_id&year=$year&description=$description";
 }
-
 header("Location: ../php/collection.php?" . $get_request);
 
 

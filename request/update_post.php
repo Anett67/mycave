@@ -1,12 +1,10 @@
 <?php require 'param.php'; ?>
 <?php require 'connect.php'; ?>
-
 <?php 
 
 $year           = intval($_POST['year']);
 $description    = strip_tags($_POST['change_description']);
 $file           = $_FILES['file_upload'];
-
 
 if(empty($year)):
     $result = false;
@@ -111,11 +109,9 @@ else:
     endif;
 
 endif;
-
 if($result){
-    header('Location:' . SITE_URL . 'php/collection.php?response=' . $response . '&id_url=' . $_GET['id_url']);
+    header("Location: ../php/collection.php?response=" . $response . "&id_url=" . $_GET['id_url']);
 }else{
-    header('Location:' . SITE_URL . '/hp/update_form.php?response=' . $response . '&id_url=' . $_GET['id_url']);
+    header("Location: ../php/update_form.php?response=" . $response . "&id_url=" . $_GET['id_url']);
 }
-
 ?>

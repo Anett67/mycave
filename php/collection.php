@@ -52,7 +52,7 @@
 
         <div class="product_list">
             
-            <div class="ajax">
+            <div class="ajax row justify-content-around">
                 
                 <div class="bottles">
                     <?php require '../request/products_read.php'; ?>

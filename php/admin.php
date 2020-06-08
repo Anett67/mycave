@@ -4,9 +4,9 @@
 
  ?>
 
-<section class="connect_form">
+<section class="connect_form row">
     
-    <form action="../request/login_post.php" method="post">
+    <form class="col-10 col-lg-4" action="../request/login_post.php" method="post">
         
         <h2>Admin Page</h2>
         
